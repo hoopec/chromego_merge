@@ -215,6 +215,22 @@ except Exception as e:
     print(f"Error reading file: {e}")
 
 
+#处理重名节点
+name_list = []
+merged_proxies_new = []
+for proxy in merged_proxies:
+    name = proxy['name']
+    if name not in name_list:
+        name_list.append(name)
+        merged_proxies_new.append(proxy)
+    else:
+        index = 1
+        while f"{name}({index})" in name_list:
+            index += 1
+        proxy['name'] = f"{name}({index})"
+        name_list.append(proxy['name'])
+        merged_proxies_new.append(proxy)
+
 
 # 读取普通的配置文件内容
 with codecs.open('./templates/clash_template.yaml', 'r', encoding='utf-8') as file:
