@@ -29,6 +29,7 @@ jobs:
         run: python shadowrocket_merge.py  # 替换为你的 merge.py 脚本名称
       - name: Commit Changes
         run: |
+          git checkout main
           git config core.ignorecase false
           git config --local user.email "1317977714@qq.com"
           git config --local user.name "hoopec"
