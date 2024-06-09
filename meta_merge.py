@@ -2,7 +2,6 @@ import yaml
 import codecs
 import json
 import urllib.request
-import time
 # 定义一个空列表用于存储合并后的代理配置
 merged_proxies = []
 # 获取clash文本中的内容
@@ -26,7 +25,6 @@ try:
             merged_proxies.extend(proxies)
         except Exception as e:
             print(f"Error processing URL {url}: {e}")
-        time.sleep(5)
 except Exception as e:
     print(f"Error reading file: {e}")
 
@@ -127,7 +125,6 @@ try:
             merged_proxies.append(proxy)
         except Exception as e:
             print(f"Error processing URL {url}: {e}")
-        time.sleep(5)
 except Exception as e:
     print(f"Error reading file: {e}")
 
@@ -214,7 +211,6 @@ try:
             merged_proxies.append(proxy)
         except Exception as e:
             print(f"Error processing URL {url}: {e}")
-        time.sleep(5)
 except Exception as e:
     print(f"Error reading file: {e}")
 
