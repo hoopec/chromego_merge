@@ -34,4 +34,4 @@ jobs:
           git config --local user.name "hoopec"
           git add .
           git commit -m "Updated at $(date '+%Y-%m-%d %H:%M:%S')"
-          git push -f origin main
+          git push
