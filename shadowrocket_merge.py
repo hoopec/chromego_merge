@@ -3,6 +3,7 @@ import json
 import urllib.request
 import yaml
 import codecs
+import time
 
 merged_proxies = []
 
@@ -26,6 +27,7 @@ try:
             merged_proxies.append(naiveproxy)
         except Exception as e:
             print(f"Error processing URL {url}: {e}")
+        time.sleep(5)
 except Exception as e:
     print(f"Error reading file: {e}")
 
@@ -58,6 +60,7 @@ try:
             merged_proxies.append(shadowtls_proxy)
         except Exception as e:
             print(f"Error processing URL {url}: {e}")
+        time.sleep(5)
 except Exception as e:
     print(f"Error reading file: {e}")
 
@@ -91,6 +94,7 @@ try:
             merged_proxies.append(hysteria)
         except Exception as e:
             print(f"Error processing URL {url}: {e}")
+        time.sleep(5)
 except Exception as e:
     print(f"Error reading file: {e}")
 
@@ -142,6 +146,7 @@ try:
             merged_proxies.append(reality)
         except Exception as e:
             print(f"Error processing URL {url}: {e}")
+        time.sleep(5)
 except Exception as e:
     print(f"Error reading file: {e}")
 
@@ -211,6 +216,7 @@ try:
                     merged_proxies.append(hysteria_meta)
         except Exception as e:
             print(f"Error processing URL {url}: {e}")
+        time.sleep(5)
 except Exception as e:
     print(f"Error reading file: {e}")
 
