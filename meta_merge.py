@@ -127,6 +127,7 @@ try:
             merged_proxies.append(proxy)
         except Exception as e:
             print(f"Error processing URL {url}: {e}")
+        time.sleep(5)
 except Exception as e:
     print(f"Error reading file: {e}")
 
@@ -213,6 +214,7 @@ try:
             merged_proxies.append(proxy)
         except Exception as e:
             print(f"Error processing URL {url}: {e}")
+        time.sleep(5)
 except Exception as e:
     print(f"Error reading file: {e}")
 
